@@ -131,12 +131,12 @@ if st.button("Generate Plan"):
                 data = resp.json()
                 plan = data.get("plan") or data
                 st.success("Plan generated")
-                #st.json(plan)
-                st.markdown(f"```json\n{json.dumps(plan, indent=2)}\n```")
-                if isinstance(plan, dict):
-                    for key, value in plan.items():
-                        st.markdown(f"### {key.capitalize()}")
-                        st.markdown(f"{value}")
+                st.json(plan)
+                # st.markdown(f"```json\n{json.dumps(plan, indent=2)}\n```")
+                # if isinstance(plan, dict):
+                #     for key, value in plan.items():
+                #         st.markdown(f"### {key.capitalize()}")
+                #         st.markdown(f"{value}")
 
                 # download
                 st.download_button(
