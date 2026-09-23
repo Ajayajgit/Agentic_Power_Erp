@@ -1,0 +1,81 @@
+{
+  "tenant_id": "power_cloud",
+  "template_name": "Standard NetSuite Mid-Market Implementation Template",
+  "version": "3.2",
+  "note": "This template defines PHASE STRUCTURE and typical deliverables only. It intentionally does not contain effort/hour estimates - those must be calibrated from the tenant's own historical engagement data, not from an idealized template.",
+  "phases": [
+    {
+      "name": "Discovery",
+      "typical_deliverables": [
+        "Project charter",
+        "Current-state process maps",
+        "Requirements sign-off document",
+        "Integration inventory (systems touching the ERP)"
+      ],
+      "typical_resource_roles": ["Solution Architect", "Functional Consultant", "Integration Consultant"]
+    },
+    {
+      "name": "Design",
+      "typical_deliverables": [
+        "Solution design document",
+        "Data migration strategy",
+        "Integration design specs",
+        "Client design sign-off"
+      ],
+      "typical_resource_roles": ["Solution Architect", "Functional Consultant", "Integration Consultant"]
+    },
+    {
+      "name": "Configuration",
+      "typical_deliverables": [
+        "Core ERP configuration",
+        "Custom workflows/scripts",
+        "Roles and permissions setup",
+        "Configuration walkthrough with client"
+      ],
+      "typical_resource_roles": ["Functional Consultant", "Developer"]
+    },
+    {
+      "name": "Integration",
+      "typical_deliverables": [
+        "Third-party/EDI integrations built and unit tested",
+        "Ecommerce connector configured",
+        "Finance system syncs (payroll, expense, etc.)"
+      ],
+      "typical_resource_roles": ["Integration Consultant", "Developer"]
+    },
+    {
+      "name": "Testing",
+      "typical_deliverables": [
+        "Data migration executed and validated",
+        "System integration testing (SIT) complete",
+        "User acceptance testing (UAT) signed off"
+      ],
+      "typical_resource_roles": ["Functional Consultant", "QA Lead"]
+    },
+    {
+      "name": "Training",
+      "typical_deliverables": [
+        "Role-based end-user training sessions",
+        "Training materials and quick reference guides"
+      ],
+      "typical_resource_roles": ["Functional Consultant"]
+    },
+    {
+      "name": "Go-Live",
+      "typical_deliverables": [
+        "Cutover plan executed",
+        "Go/no-go checklist signed off"
+      ],
+      "typical_resource_roles": ["Solution Architect", "Functional Consultant"]
+    },
+    {
+      "name": "Hypercare",
+      "typical_deliverables": [
+        "Post go-live support window",
+        "Issue log and resolution tracking",
+        "Transition-to-support handoff"
+      ],
+      "typical_resource_roles": ["Functional Consultant"]
+    }
+  ]
+}

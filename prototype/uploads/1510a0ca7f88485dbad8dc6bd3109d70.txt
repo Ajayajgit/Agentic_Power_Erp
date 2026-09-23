@@ -1,0 +1,47 @@
+ENGAGEMENT RETROSPECTIVE
+Client: Northwind Wholesale Distributors
+Engagement: NetSuite Implementation (Multi-location inventory, EDI x2, Shopify x1)
+Prepared by: Power Cloud Delivery Team
+Date: 2026-02-05
+
+SUMMARY
+The Northwind engagement went live successfully on 2026-01-19, roughly three weeks
+later than the original target date. Overall actual effort ran approximately 28%
+over the original estimate. Below are the key drivers, useful for calibrating
+future engagements with a similar profile (multi-location inventory + EDI with
+retail partners).
+
+WHAT DROVE OVERRUNS
+1. EDI partner certification was the single largest schedule risk, not NetSuite
+   configuration itself. Partner-side certification testing added roughly 4 weeks
+   beyond our internal integration build timeline, and this was largely outside
+   our control. Task t034 (certification support) ran 3x over its original estimate.
+2. Custom development for cross-location available-to-promise logic (t022) was
+   underestimated. What looked like a standard configuration item in scoping
+   turned out to require custom scripting once we understood the client's
+   specific costing method.
+3. Current-state process mapping (t002) and EDI requirements gathering (t003)
+   both ran significantly over estimate during Discovery. In hindsight, clients
+   with multiple legacy systems and manual reconciliation processes take longer
+   to document accurately than clients with simpler current-state environments.
+4. Hypercare (t061) ran 55% over estimate. Post go-live issue volume was higher
+   than expected in week one, primarily related to inventory data migration
+   discrepancies that weren't caught in UAT.
+
+WHAT WENT WELL
+- Shopify storefront integration (t032) and the ADP/Ramp finance syncs (t033)
+  both came in at or under estimate. Standard ecommerce and finance-system
+  connectors are comparatively low-risk and predictable.
+- Role and permission setup (t023) also came in under estimate.
+
+RECOMMENDATIONS FOR SIMILAR FUTURE ENGAGEMENTS
+- For clients with EDI relationships with major retail partners, add explicit
+  schedule buffer for partner-side certification, and flag it as a risk item
+  independent of internal team velocity.
+- For available-to-promise or other cross-location logic, confirm early whether
+  the client's costing method is standard NetSuite or will require custom
+  scripting, and estimate accordingly rather than assuming standard configuration.
+- Increase Discovery-phase effort estimates for clients with manual,
+  spreadsheet-based current-state processes across multiple systems.
+- Budget hypercare closer to actual historical average than the template default,
+  particularly when data migration complexity is high.

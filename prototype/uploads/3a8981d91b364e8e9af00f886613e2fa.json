@@ -1,0 +1,45 @@
+{
+  "source_tool": "asana",
+  "tenant_id": "power_cloud",
+  "project": {
+    "gid": "proj_1001",
+    "name": "Northwind Wholesale Distributors — NetSuite Implementation",
+    "status": "completed",
+    "industry": "wholesale_distribution",
+    "start_on": "2025-09-02",
+    "actual_go_live": "2026-01-19",
+    "notes": "Completed engagement, similar profile: multi-location inventory, EDI with 2 retail partners, single Shopify storefront."
+  },
+  "tasks": [
+    {"gid": "t001", "name": "Kickoff and project charter sign-off", "phase": "Discovery", "assignee_role": "Solution Architect", "estimated_hours": 8, "actual_hours": 8, "status": "completed", "start_on": "2025-09-02", "due_on": "2025-09-05", "dependencies": []},
+    {"gid": "t002", "name": "Current-state process mapping (inventory, order-to-cash)", "phase": "Discovery", "assignee_role": "Functional Consultant", "estimated_hours": 24, "actual_hours": 34, "status": "completed", "start_on": "2025-09-05", "due_on": "2025-09-16", "dependencies": ["t001"]},
+    {"gid": "t003", "name": "EDI partner requirements gathering (2 retail partners)", "phase": "Discovery", "assignee_role": "Integration Consultant", "estimated_hours": 16, "actual_hours": 28, "status": "completed", "start_on": "2025-09-08", "due_on": "2025-09-19", "dependencies": ["t001"]},
+    {"gid": "t004", "name": "Requirements sign-off document", "phase": "Discovery", "assignee_role": "Solution Architect", "estimated_hours": 8, "actual_hours": 10, "status": "completed", "start_on": "2025-09-17", "due_on": "2025-09-22", "dependencies": ["t002", "t003"]},
+
+    {"gid": "t010", "name": "Solution design — inventory & multi-location costing", "phase": "Design", "assignee_role": "Solution Architect", "estimated_hours": 32, "actual_hours": 40, "status": "completed", "start_on": "2025-09-23", "due_on": "2025-10-06", "dependencies": ["t004"]},
+    {"gid": "t011", "name": "Solution design — EDI mapping (850/855/856)", "phase": "Design", "assignee_role": "Integration Consultant", "estimated_hours": 24, "actual_hours": 38, "status": "completed", "start_on": "2025-09-23", "due_on": "2025-10-06", "dependencies": ["t004"]},
+    {"gid": "t012", "name": "Data migration strategy (legacy WMS to NetSuite)", "phase": "Design", "assignee_role": "Functional Consultant", "estimated_hours": 20, "actual_hours": 26, "status": "completed", "start_on": "2025-09-25", "due_on": "2025-10-08", "dependencies": ["t002"]},
+    {"gid": "t013", "name": "Design review and client sign-off", "phase": "Design", "assignee_role": "Solution Architect", "estimated_hours": 8, "actual_hours": 12, "status": "completed", "start_on": "2025-10-07", "due_on": "2025-10-13", "dependencies": ["t010", "t011", "t012"]},
+
+    {"gid": "t020", "name": "Core NetSuite configuration (multi-location inventory)", "phase": "Configuration", "assignee_role": "Functional Consultant", "estimated_hours": 60, "actual_hours": 78, "status": "completed", "start_on": "2025-10-14", "due_on": "2025-11-03", "dependencies": ["t013"]},
+    {"gid": "t021", "name": "Order management and pricing rules configuration", "phase": "Configuration", "assignee_role": "Functional Consultant", "estimated_hours": 40, "actual_hours": 45, "status": "completed", "start_on": "2025-10-14", "due_on": "2025-10-31", "dependencies": ["t013"]},
+    {"gid": "t022", "name": "Custom workflow: available-to-promise across locations", "phase": "Configuration", "assignee_role": "Developer", "estimated_hours": 32, "actual_hours": 52, "status": "completed", "start_on": "2025-10-20", "due_on": "2025-11-07", "dependencies": ["t020"]},
+    {"gid": "t023", "name": "Role and permission setup (35 users)", "phase": "Configuration", "assignee_role": "Functional Consultant", "estimated_hours": 16, "actual_hours": 14, "status": "completed", "start_on": "2025-10-27", "due_on": "2025-11-03", "dependencies": ["t013"]},
+
+    {"gid": "t030", "name": "EDI integration build — Partner A (856/850/855)", "phase": "Integration", "assignee_role": "Integration Consultant", "estimated_hours": 40, "actual_hours": 64, "status": "completed", "start_on": "2025-11-04", "due_on": "2025-11-24", "dependencies": ["t011"]},
+    {"gid": "t031", "name": "EDI integration build — Partner B (856/850/855)", "phase": "Integration", "assignee_role": "Integration Consultant", "estimated_hours": 40, "actual_hours": 58, "status": "completed", "start_on": "2025-11-04", "due_on": "2025-11-24", "dependencies": ["t011"]},
+    {"gid": "t032", "name": "Shopify storefront connector configuration", "phase": "Integration", "assignee_role": "Developer", "estimated_hours": 24, "actual_hours": 22, "status": "completed", "start_on": "2025-11-10", "due_on": "2025-11-21", "dependencies": ["t020"]},
+    {"gid": "t033", "name": "ADP payroll and Ramp expense sync integration", "phase": "Integration", "assignee_role": "Developer", "estimated_hours": 24, "actual_hours": 20, "status": "completed", "start_on": "2025-11-10", "due_on": "2025-11-21", "dependencies": []},
+    {"gid": "t034", "name": "EDI partner certification support (external dependency)", "phase": "Integration", "assignee_role": "Integration Consultant", "estimated_hours": 16, "actual_hours": 48, "status": "completed", "start_on": "2025-11-18", "due_on": "2025-12-12", "dependencies": ["t030", "t031"]},
+
+    {"gid": "t040", "name": "Data migration execution and validation", "phase": "Testing", "assignee_role": "Functional Consultant", "estimated_hours": 32, "actual_hours": 46, "status": "completed", "start_on": "2025-12-01", "due_on": "2025-12-15", "dependencies": ["t012", "t020"]},
+    {"gid": "t041", "name": "System integration testing (SIT)", "phase": "Testing", "assignee_role": "QA Lead", "estimated_hours": 40, "actual_hours": 56, "status": "completed", "start_on": "2025-12-08", "due_on": "2025-12-22", "dependencies": ["t030", "t031", "t032", "t033"]},
+    {"gid": "t042", "name": "User acceptance testing (UAT) support", "phase": "Testing", "assignee_role": "Functional Consultant", "estimated_hours": 24, "actual_hours": 30, "status": "completed", "start_on": "2025-12-15", "due_on": "2026-01-05", "dependencies": ["t041"]},
+
+    {"gid": "t050", "name": "End-user training — warehouse and order management", "phase": "Training", "assignee_role": "Functional Consultant", "estimated_hours": 16, "actual_hours": 18, "status": "completed", "start_on": "2026-01-05", "due_on": "2026-01-12", "dependencies": ["t042"]},
+    {"gid": "t051", "name": "End-user training — finance and reporting", "phase": "Training", "assignee_role": "Functional Consultant", "estimated_hours": 12, "actual_hours": 12, "status": "completed", "start_on": "2026-01-05", "due_on": "2026-01-12", "dependencies": ["t042"]},
+
+    {"gid": "t060", "name": "Go-live cutover execution", "phase": "Go-Live", "assignee_role": "Solution Architect", "estimated_hours": 16, "actual_hours": 24, "status": "completed", "start_on": "2026-01-16", "due_on": "2026-01-19", "dependencies": ["t050", "t051"]},
+    {"gid": "t061", "name": "Hypercare support (2 weeks post go-live)", "phase": "Hypercare", "assignee_role": "Functional Consultant", "estimated_hours": 40, "actual_hours": 62, "status": "completed", "start_on": "2026-01-19", "due_on": "2026-02-02", "dependencies": ["t060"]}
+  ]
+}

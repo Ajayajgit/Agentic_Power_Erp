@@ -1,0 +1,90 @@
+DISCOVERY CALL TRANSCRIPT
+Engagement: Meridian Outdoor Supply Co. — NetSuite Implementation
+Session: Discovery Session 2 of 3 (Operations & Inventory Deep Dive)
+Date: 2026-07-14
+Attendees:
+  - Rachel Kim, VP of Operations (Meridian Outdoor Supply Co.)
+  - Tom Alvarez, IT Director (Meridian Outdoor Supply Co.)
+  - Priya Nair, Finance Lead (Meridian Outdoor Supply Co.)
+  - David Chen, Solution Architect (Power Cloud Consulting)
+  - Sarah Okafor, Functional Consultant (Power Cloud Consulting)
+
+[00:02:15] David Chen: Thanks everyone for joining. Last session we covered your finance
+close process. Today we want to dig into inventory, order management, and the
+integrations you mentioned. Rachel, can you start by walking us through your current
+warehouse setup?
+
+[00:02:40] Rachel Kim: Sure. We operate three distribution centers — Denver, Reno, and
+Columbus — plus a small overflow facility in Denver we lease seasonally from
+April through September. Right now everything is tracked in a legacy WMS that
+doesn't talk to our accounting system at all. Every week someone on my team
+manually reconciles stock counts between the WMS exports and our QuickBooks
+inventory ledger. It's incredibly error-prone.
+
+[00:03:52] Tom Alvarez: And on top of that, we're running two Shopify storefronts for
+direct-to-consumer, and separately we do EDI with three big retail partners —
+Cabela's, Dick's Sporting Goods, and REI. Each of those EDI connections has its
+own quirks. Dick's requires ASN documents within 2 hours of shipment, REI wants
+850/855/856 transaction sets, and Cabela's still uses an older EDI mapping
+that our current 3PL barely supports.
+
+[00:05:10] David Chen: Understood. So multi-location inventory, direct EDI with three
+retail partners, two Shopify storefronts, and a seasonal overflow warehouse.
+That's a meaningful integration surface. Priya, how does finance currently
+handle multi-location costing?
+
+[00:05:44] Priya Nair: Badly, honestly. We use average costing but it's calculated
+in a spreadsheet per location, monthly, not in real time. We've had at least
+two instances in the last year where we way overstated available-to-promise
+inventory because the spreadsheet was stale, and we ended up overselling on
+Shopify during a flash sale.
+
+[00:07:02] Sarah Okafor: That's a good flag for the requirements doc — real-time
+available-to-promise across locations is going to be one of our critical
+success factors, not a nice-to-have. Rachel, what's your target go-live?
+
+[00:07:20] Rachel Kim: Ideally we want to be live before our fall peak season,
+which really means early November at the latest. Our board is also asking
+about eventually adding a fourth distribution center in the Southeast next
+year, so whatever we build needs to scale, not be a one-off.
+
+[00:08:15] Tom Alvarez: One more thing — we have about 40 users total who'd need
+NetSuite access. Warehouse staff need mobile scanning for receiving and
+picking. We currently use Zebra handhelds with a WMS-specific app; we'd
+want those to still work, or a comparable NetSuite WMS solution.
+
+[00:09:30] David Chen: Noted. On the finance side, are there other systems
+touching the general ledger today besides QuickBooks?
+
+[00:09:45] Priya Nair: Payroll runs through ADP, and we use Ramp for corporate
+card spend management. Both would ideally sync into NetSuite so we're not
+doing manual journal entries every month-end. That manual close currently
+takes us nine business days, which is way too long for a company our size.
+
+[00:11:02] David Chen: That's helpful context for scoping. Let's talk timeline
+constraints one more time — November go-live, so roughly a seventeen-week
+window from anticipated contract signature. Given the EDI complexity and
+multi-location inventory work, we'll want to flag that as a schedule risk
+early, particularly around integration testing time with your EDI VAN provider
+and the retail partners' certification processes, which are often outside
+our direct control.
+
+[00:12:40] Sarah Okafor: Agreed. Cabela's certification alone has taken other
+clients four to six weeks in our experience, and that's often the long pole,
+not the NetSuite configuration itself.
+
+[00:13:20] Rachel Kim: Good to know. What do you need from us before the next
+session?
+
+[00:13:35] David Chen: A current org chart for who'll be involved on your side,
+sample EDI transaction files if you have them from your 3PL, and if possible,
+export samples from the legacy WMS so we can assess data migration complexity
+early rather than late.
+
+[00:14:10] Tom Alvarez: I can get you the WMS exports by end of week. EDI samples
+might take a bit longer since we'll need to loop in our 3PL contact.
+
+[00:14:30] David Chen: That works. We'll follow up with a written summary and
+a proposed phase breakdown after this call. Thanks everyone.
+
+[END OF TRANSCRIPT]
