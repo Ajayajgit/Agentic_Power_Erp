@@ -4,7 +4,7 @@ import json
 
 st.set_page_config(page_title="NetSuite UI", layout="wide")
 
-DEFAULT_BACKEND = "http://localhost:8000"
+DEFAULT_BACKEND = os.getenv("BACKEND_URL","http://localhost:8000")
 
 if "file_ids" not in st.session_state:
     st.session_state.file_ids = {}
