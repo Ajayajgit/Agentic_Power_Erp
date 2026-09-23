@@ -3,7 +3,7 @@ import requests
 import json
 import os
 from dotenv import load_dotenv
-load_env()
+load_dotenv()
 
 st.set_page_config(page_title="NetSuite UI", layout="wide")
 
