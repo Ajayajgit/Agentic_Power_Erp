@@ -1,6 +1,9 @@
 import streamlit as st
 import requests
 import json
+import os
+from dotenv import load_dotenv
+load_env()
 
 st.set_page_config(page_title="NetSuite UI", layout="wide")
 
